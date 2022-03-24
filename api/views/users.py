@@ -2,10 +2,10 @@ from rest_framework.response import Response
 from rest_framework import status, generics
 from rest_framework.authtoken.models import Token
 from ..serializers.user import UserSerializer
-from django.contib.auth import authenticate,login,logout
+from django.contrib.auth import authenticate,login,logout
 
 
-class SignUp(generics.createAPIView):
+class SignUp(generics.CreateAPIView):
     #Overriding the default authentication and permissions classes to be None 
     authentication_classes = ()
     permission_classes = ()
