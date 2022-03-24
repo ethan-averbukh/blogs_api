@@ -1,7 +1,7 @@
-from django.urls import path
-
-from .views.blogs import BlogsView
+from xml.etree.ElementInclude import include
+from django.urls import path, include
+from .views import index
 
 urlpatterns = [
-    path('blogs/', BlogsView.as_view(), name='blogs')
+    path('', index.index, name='index')
 ]
